@@ -4,80 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
-    <style>
-      * {
-        /* Į bendrą plotį neįskaičiuojami border padding ir margin */
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background-color: rgb(233, 233, 183);
-        /* background-color: url(img) no-repeat center center; */
-      }
-
-      .contact {
-        background-color: white;
-        max-width: 1440px;
-        width: 100%;
-        margin: 100px auto;
-        border-radius: 40px;
-        padding: 30px 50px;
-        position: relative;
-        overflow: hidden;
-        /* laikinas */
-        height: 600px;
-      }
-
-      .contact::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-color: #6de1c2;
-        height: 100%;
-        width: 419px;
-        border-top-right-radius: 40px;
-        border-bottom-right-radius: 40px;
-      }
-
-      .contact-inner {
-        height: 550px;
-        display: flex;
-        position: relative;
-        z-index: 1;
-      }
-
-      .left {
-        background-color: aquamarine;
-        width: 50%;
-        /* laikinas */
-        height: 100%;
-      }
-
-      .right {
-        background-color: blueviolet;
-        width: 50%;
-        height: 100%;
-      }
-
-      @media screen and (max-width: 768px) {
-        .contact-inner {
-          flex-direction: column;
-        }
-
-        .left,
-        .right {
-          width: 100%;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="contact">
       <div class="contact-inner">
-        <div class="left"></div>
-        <div class="right"></div>
+        <div class="left">
+          <div class="left-title">
+            <h1>Get in <span>touch</span></h1>
+            <p>
+              Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu
+              leo molestie vel, ornare nin id blandit netus.
+            </p>
+          </div>
+          <div>
+            <input type="text" placeholder="Contact name" />
+          </div>
+          <div>
+            <input type="text" placeholder="Street" />
+          </div>
+          <div>
+            <input type="text" placeholder="City" />
+            <input type="text" placeholder="Postcode" />
+          </div>
+          <div>
+            <input type="text" placeholder="Contact Phone" />
+          </div>
+          <div>
+            <input type="text" placeholder="E-mail" />
+          </div>
+          <div>
+            <input type="text" placeholder="Let's talk about your idea" />
+          </div>
+          <div>
+            <input type="file" multiple />
+            <label
+              >Attach file. File size of your documentsshould not exceed
+              10MB</label
+            >
+          </div>
+          <div>
+            <div>
+              <label for="">
+                <input type="checkbox" />I want to protect my data by signing an
+                NDA
+              </label>
+            </div>
+            <div>
+              <button>SUBMIT</button>
+            </div>
+            <div class="left-footer">
+              <div>
+                <!-- font -->
+                <i></i>
+              </div>
+              <div>
+                <p>Phone</p>
+                <p>111 111 111</p>
+              </div>
+              <div>
+                <!-- font -->
+                <i></i>
+              </div>
+              <div>
+                <p>E-MAIL</p>
+                <p>info@company.com</p>
+              </div>
+              <div>
+                <!-- font -->
+                <i></i>
+              </div>
+              <div>
+                <p>HELPDESK</p>
+                <a href="">https://helpdesk.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right"><img src="/contact/Slice3.png" alt="" /></div>
       </div>
     </div>
   </body>

@@ -1,0 +1,98 @@
+* {
+  /* Į bendrą plotį neįskaičiuojami border padding ir margin */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background: url(/contact/background.png) no-repeat center center;
+}
+
+.contact {
+  background-color: white;
+  max-width: 1440px;
+  width: 100%;
+  margin: 100px auto;
+  border-radius: 40px;
+  padding: 30px 50px;
+  position: relative;
+  overflow: hidden;
+  /* laikinas */
+  height: 600px;
+}
+
+.contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #6de1c2;
+  height: 100%;
+  width: 419px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.contact-inner {
+  height: 550px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.left {
+  /* background-color: aquamarine; */
+  width: 50%;
+  /* laikinas */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right {
+  background-color: blueviolet;
+  width: 50%;
+  height: 100%;
+}
+
+.left p {
+  margin: 0;
+}
+
+.left-title {
+  line-height: 24px;
+  width: 80%;
+}
+
+.left-title h1 {
+  font-size: 46px;
+  font-weight: semiBold;
+  letter-spacing: 1%;
+  margin-top: 0px;
+}
+
+.left-title p {
+  font-size: 14px;
+}
+
+.left-title span {
+  color: #6de1c2;
+}
+
+.left-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-inner {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+}
