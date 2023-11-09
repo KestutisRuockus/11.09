@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <style>
+      label {
+        display: block;
+      }
+
+      input {
+        width: 100%;
+        border: 1px solid rgb(212, 212, 212);
+      }
+
+      /* Filtracija pagal atributa */
+      input[type="checkbox"],
+      input[type="radio"] {
+        width: auto;
+      }
+
+      select {
+        width: 100%;
+      }
+
+      .flex {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="">Jūsų Vardas</label>
+      <input type="text" placeholder="Vardenis Pavardenis" required />
+      <label for="">Produktų kiekis</label>
+      <input
+        type="number"
+        placeholder="Įveskite kiekį"
+        value="1"
+        min="1"
+        max="50"
+        required
+      />
+      <label for="">el. pašto adresas</label>
+      <input type="email" placeholder="email@gmail.com" required />
+      <label for="">Jūsų slaptažodis</label>
+      <input type="password" required />
+      <label for="">Pasirinkite spalvą</label>
+      <input type="color" />
+      <label for="">Pasirinkite fiksuotą spalvą</label>
+      <input type="color" list="spalvos" />
+      <datalist id="spalvos">
+        >
+        <option value="#FFFFFF">Balta</option>
+        <option value="#000000">Juoda</option>
+        <option value="#CCCCCC">Pilka</option>
+      </datalist>
+      <label for="">Pasirinkite datą</label>
+      <input type="date" />
+      <label for="">Pasirinkite datą ir laiką</label>
+      <input type="datetime-local" />
+      <label for="">Pasirinkite Failą</label>
+      <input type="file" />
+      <label for="">Pasirinkite Failus</label>
+      <input type="file" multiple />
+      <h3>Checkboxes</h3>
+      <label for="">
+        <input type="checkbox" />Susipažinau su privatumo politika</label
+      >
+      <div class="flex">
+        <input type="checkbox" id="newsletter" />
+        <label for="">Noreciau gauti naujienlaiskius</label>
+      </div>
+      <h3>Radio</h3>
+      <label for="">
+        <input type="radio" name="top" />
+        <span>Sąskaitos</span></label
+      >
+      <label for="">
+        <input type="radio" name="top" />
+        <span>Klientų informacija</span></label
+      >
+      <label for="">
+        <input type="radio" name="top" />
+        <span>Garantinės paslaugos</span></label
+      >
+      <h3>Select</h3>
+      <select>
+        <option value="">Sąsakitos</option>
+        <option value="">Klientų informacija</option>
+        <option value="">Garantinės paslaugos</option>
+      </select>
+      <button>Siųsti</button>
+    </form>
+  </body>
+</html>
